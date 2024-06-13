@@ -556,8 +556,8 @@ class OidcClient {
             const res = yield httpclient
                 .getJson(id_token_url)
                 .catch(error => {
-                throw new Error(`Failed to get ID Token. \n 
-        Error Code : ${error.statusCode}\n 
+                throw new Error(`Failed to get ID Token. \n
+        Error Code : ${error.statusCode}\n
         Error Message: ${error.result.message}`);
             });
             const id_token = (_a = res.result) === null || _a === void 0 ? void 0 : _a.value;
@@ -3545,7 +3545,7 @@ function expand(str, isTop) {
     ? expand(m.post, false)
     : [''];
 
-  if (/\$$/.test(m.pre)) {    
+  if (/\$$/.test(m.pre)) {
     for (var k = 0; k < post.length; k++) {
       var expansion = pre+ '{' + m.body + '}' + post[k];
       expansions.push(expansion);
@@ -7478,7 +7478,7 @@ class ESLint {
 		const fixArg = fix ? "--fix" : "";
 		const commandPrefix = prefix || getNpmBinCommand(dir);
 		return run(
-			`${commandPrefix} eslint --ext ${extensionsArg} ${fixArg} --no-color --format json ${args} "."`,
+			`${commandPrefix} eslint ${fixArg} --no-color --format json ${args} "."`,
 			{
 				dir,
 				ignoreErrors: true,
@@ -10506,7 +10506,7 @@ module.exports = JSON.parse('{"name":"lint-action","version":"2.3.0","descriptio
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __nccwpck_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -10520,7 +10520,7 @@ module.exports = JSON.parse('{"name":"lint-action","version":"2.3.0","descriptio
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		var threw = true;
 /******/ 		try {
@@ -10529,16 +10529,16 @@ module.exports = JSON.parse('{"name":"lint-action","version":"2.3.0","descriptio
 /******/ 		} finally {
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat */
-/******/ 	
+/******/
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
